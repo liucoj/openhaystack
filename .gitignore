@@ -107,3 +107,6 @@ iOSInjectionProject/
 
 # Exports folder 
 Exports/
+Firmware/M5StickC/tmp.key
+Firmware/M5StickC/venv/
+Firmware/.DS_Store
