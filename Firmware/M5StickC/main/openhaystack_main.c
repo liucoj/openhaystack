@@ -14,6 +14,7 @@
 #include "esp_bt_defs.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
+/** m5stickc support */
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
@@ -166,9 +167,9 @@ void app_main(void)
         return;
     }
     ESP_LOGI(LOG_TAG, "application initialized");
-        /* start Blinking function*/
-    gpio_reset_pin(BLINK_GPIO);
-    /* Set the GPIO as a push/pull output */
+        gpio_reset_pin(BLINK_GPIO);
+    
+    /* M5StickC -> Set the GPIO as a push/pull output */
     gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
     while(1) {
     /* Blink off (output low) */
@@ -179,6 +180,6 @@ void app_main(void)
     printf("Turning ON the LED\n");
     gpio_set_level(BLINK_GPIO, 1);
     vTaskDelay(10000 / portTICK_PERIOD_MS);
+    /* M5StickC -> end Blinking implementation */
              }
-
 }
