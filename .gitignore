@@ -111,3 +111,5 @@ Firmware/M5StickC/tmp.key
 Firmware/M5StickC/venv/
 Firmware/.DS_Store
 Firmware/M5StickC/.DS_Store
+Firmware/ESP32/.DS_Store
+.DS_Store
